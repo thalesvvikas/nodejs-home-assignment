@@ -193,3 +193,35 @@ Here are some suggestions for the next set of tasks for candidates to further en
 -   **Continuous Integration (CI)**:
     -   Set up a CI pipeline using GitHub Actions to automatically run tests and lint checks on every push and pull request.
 ```
+## Running the Project with Docker
+
+### Prerequisites
+Before running the application in Docker, ensure the following are installed:
+
+| Requirement | Required? | Instructions |
+|------------|----------|--------------|
+| **Docker Desktop (Windows/macOS)** https://www.docker.com/products/docker-desktop/ |
+| **Docker Compose** Comes bundled with Docker Desktop / Docker Engine |
+
+> **Windows/macOS users must start Docker Desktop before running any docker-compose commands.**
+
+---
+
+### Start Docker (Windows/macOS users)
+1. Open **Docker Desktop** from the Start Menu.
+2. Wait until it shows: **"Docker is running"**.
+3. build and run containers
+    docker-compose up --build
+
+### This project uses Nodemailer to send email notifications (e.g., for task creation and updation, user registration confirmation)
+
+# Nodemailer Email Configuration (add in .env)
+EMAIL_PASS=your-email-password
+EMAIL_USER=<your-email@example.com>
+
+## This project uses Redis for job queues (via BullMQ). When running with Docker, Redis is included as a service.
+# The default host and port in Docker Compose are:
+REDIS_HOST=redis
+REDIS_PORT=6379
+
+

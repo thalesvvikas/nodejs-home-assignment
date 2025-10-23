@@ -5,8 +5,8 @@ exports.register = async (req, res, next) => {
   try {
     const errors = validationResult(req);
     if (!errors.isEmpty()) return res.status(400).json({ errors: errors.array() });
-    const { username, password } = req.body;
-    const user = await authService.register(username, password);
+    const { username, password, email, role } = req.body;
+    const user = await authService.register(username, password, email, role);
     res.status(201).json({ message: 'User created', user });
   } catch (err) { next(err); }
 };
