@@ -185,7 +185,13 @@ Here are some suggestions for the next set of tasks for candidates to further en
 -   **Asynchronous Job Queue**:
     -   Implement a background job queue for sending email notifications (e.g., on task creation or completion) using a library like `BullMQ` with Redis.
 
+-   **React Frontend Integration**:
+    -   Create a basic React application to consume the Task Manager API. It should allow users to perform CRUD operations on their tasks. Pay special attention to state management (e.g., using Context API, Redux, or Zustand) to handle task data.
+
 ## Extra Merits
+
+-   **React Frontend Authentication**:
+    -   Integrate the Register and Login functionality into the React application. This should include managing user authentication state and tokens securely.
 
 -   **Dockerization**:
     -   Create a `Dockerfile` for the Node.js application and a `docker-compose.yml` file to orchestrate the application and the PostgreSQL database services.
