@@ -9,4 +9,5 @@ router.get('/', taskController.getTasks);
 router.post('/', [body('title').notEmpty()], taskController.createTask);
 router.put('/:id', taskController.updateTask);
 router.delete('/:id', taskController.deleteTask);
+router.delete('/softdelete/:id', taskController.SoftDelete);
 module.exports = router;
